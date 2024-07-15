@@ -1,77 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Beranda</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
-    <!-- boxicons link-->
+    <!-- tautan boxicons -->
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-    <!-- google font-->
+    <!-- font google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta name="description" content="Jelajahi smartwatch Amazfit. Temukan yang cocok dengan Anda dalam Seri Element kami. Lebih maju dari waktu yang terus berjalan.">
+
+    <!-- manifest -->
+    <link rel="manifest" href="/manifest.json">
 
 </head>
 <body>
-    <!-- header-->
+    <!-- header -->
     <header>
         <a href="#" class="logo"><i class='bx bx-stopwatch'></i>Amazfit</a>
 
         <ul class="navlist">
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="#" class="active">Beranda</a></li>
+            <li><a href="#">Tentang</a></li>
             <li><a href="#">Smartphone</a></li>
-            <li><a href="#">Store</a></li>
-            <li><a href="#">Contact Us</a></li>
-
+            <li><a href="#">Toko</a></li>
+            <li><a href="#">Hubungi Kami</a></li>
         </ul>
         <div class="h-main">
-            <a href="#" class="h-btn">Buy Now</a>
+            <a href="#" class="h-btn">Beli Sekarang</a>
             <div class="bx bx-menu" id="menu-icon"></div>
             <div class="bx bx-moon" id="darkmode"></div>
         </div>
     </header>
 
-    <!-- hero section-->
+    <!-- bagian hero -->
     <section class="hero">
         <div class="hero-text">
-            <h1>Smartwacth</h1>
-            <h4>Element Serie</h4>
-            <p>Go ahead of the ticking life</p>
+            <h1>Smartwatch</h1>
+            <h4>Seri Element</h4>
+            <p>Lebih maju dari waktu yang terus berjalan</p>
             <div class="hero-in">
                 <div class="box">
                     <a href="fitur1.html">
                         <h3>Active</h3>
-                        <h5>Element</h5>    
-                        <img src="img/active.png">
+                        <h5>Element</h5>
+                        <img src="img/active.png" alt="Active Element">
                     </a>
-                    
                 </div>
 
                 <div class="box">
                     <a href="fitur2.html">
-                    <h3>T-Rex</h3>
-                    <h5>Element</h5>
-                    <img src="img/a1.png">
+                        <h3>T-Rex</h3>
+                        <h5>Element</h5>
+                        <img src="img/a1.png" alt="T-Rex Element">
                     </a>
-                    
                 </div>
 
                 <div class="box">
                     <a href="fitur3.html">
-                    <h3>GTR 3</h3>
-                    <h5>Element</h5>
-                    <img src="img/gtr3.png">
+                        <h3>GTR 3</h3>
+                        <h5>Element</h5>
+                        <img src="img/gtr3.png" alt="GTR 3 Element">
                     </a>
-                    
                 </div>
             </div>
         </div>
 
         <div class="hero-img">
-            <img src="img/a7.png" alt="">
+            <img src="img/a7.png" alt="Gambar Hero">
         </div>
     </section>
 
@@ -81,8 +81,25 @@
 
     <script src="https://unpkg.com/scrollreveal"></script>
     
-    <!-- js file link-->
+    <!-- tautan file js -->
     <script src="js/script.js"></script>
+
+    <!-- tautan servis worker -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker
+                    .register('/service-worker.js')
+                    .then(registration => {
+                        console.log('Service Worker Registered');
+                    })
+                    .catch(err => {
+                        console.log('Service Worker Registration Failed:', err);
+                    });
+            });
+        }
+    </script>
+    
     
 </body>
 </html>
